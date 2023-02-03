@@ -78,8 +78,33 @@ int registro ()  // Início da seleção
             
             system("cls");    // limpar informações 
             
+            int opcao = 0;  // Definindo variável opção  
+            
             printf("\n");
             printf("\tUsuário cadastrado com sucesso!\n\n");
+            printf("Gostaria de adicionar mais usuários?\n\n");
+            printf("Opção 1 sim\n");
+            printf("Opção 2 não\n\n");
+            printf("Opção: ");
+            scanf("%d", &opcao);           // Guardando a opção desejada 
+    
+            system("cls");    // limpar informações
+                switch(opcao)     // Escolha das opções registro de funcionário e aluno       
+    	        {
+                  case 1: 
+				  registro ();
+                  break;
+				  	
+				  case 2: main();
+                  break;
+                  
+                 efault :
+    	         printf("\tEsta opção não existe\n\n");  // Caso não existir a opção inserida 
+    	         system("pause");
+    	         break; 
+                }
+            
+            
    
             system("pause");   
     	    break;          // fim da seleção 
@@ -119,19 +144,38 @@ int registro ()  // Início da seleção
             file = fopen(arquivo, "a");
             fprintf (file, sobrenome);
             fclose (file);
-            system("pause");
-
-    	    system("cls");
-            
+           
+           system("cls");    // limpar informações
+           
             printf("\n");
             printf("\tUsuário cadastrado com sucesso!\n\n");
-            system("pause");
-    	    break; 
+            printf("Gostaria de adicionar mais usuários?\n\n");
+            printf("Opção 1 sim\n");
+            printf("Opção 2 não\n\n");
+            printf("Opção: ");
+            scanf("%d", &opcao);           // Guardando a opção desejada 
+    
+            system("cls");    // limpar informações
+                switch(opcao)     // Escolha das opções registro de funcionário e aluno       
+    	        {
+                  case 1: 
+				  registro ();
+                  break;
+				  	
+				  case 2: main();
+                  break;
+                  
+                 default :
+    	         printf("\tEsta opção não existe\n\n");  // Caso não existir a opção inserida 
+    	         system("pause");
+    	         break; 
+                }
     	    
     	    default :
     	    printf("\tEsta opção não existe\n\n"); 
     	    system("pause");
     	    break;                 // final da seleção de registro de aluno 
+    
     	
     	    }
         }
@@ -170,10 +214,10 @@ int consulta()    // Início da seleção
     	     system("pause");
     	     break;
     	   
-    	     case 2:                  // Caso não deseje cadastrar voltar em menu
+    	     case 2: main();                 // Caso não deseje cadastrar voltar em menu
     	     break;
     	   
-        	  default :
+        	 default :
     	     printf("\tEsta opção não existe\n\n");  // Caso não existir a opção inserida 
     	     system("pause");
     	     break; 
