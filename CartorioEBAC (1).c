@@ -318,7 +318,10 @@ int main()
     	   deletar ();
     	   break;
     	   
-    	   
+    	   case 4:
+    	   printf("\tObrigado por utilizar o sistema!\n");
+    	   return 0;
+    	   break;
     	   
     	   default :
     	   printf("\tEsta opção não existe\n"); 
