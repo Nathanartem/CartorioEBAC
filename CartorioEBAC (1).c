@@ -88,14 +88,14 @@ int registro ()  // Início da seleção
             printf("Opção: ");
             scanf("%d", &opcao);           // Guardando a opção desejada 
     
-            system("cls");    // limpar informações
-                switch(opcao)     // Escolha das opções registro de funcionário e aluno       
+            system("cls");    // Limpar informações
+                switch(opcao)     // Escolha das opções adicionar mais usuários     
     	        {
                   case 1: 
 				  registro ();
                   break;
 				  	
-				  case 2: main();
+				  case 2: main();    // Voltar ao menu
                   break;
                   
                  efault :
@@ -156,13 +156,13 @@ int registro ()  // Início da seleção
             scanf("%d", &opcao);           // Guardando a opção desejada 
     
             system("cls");    // limpar informações
-                switch(opcao)     // Escolha das opções registro de funcionário e aluno       
+                switch(opcao)     // Escolha das opções adicionar mais usuários       
     	        {
                   case 1: 
 				  registro ();
                   break;
 				  	
-				  case 2: main();
+				  case 2: main();   // Voltar ao menu
                   break;
                   
                  default :
@@ -174,12 +174,12 @@ int registro ()  // Início da seleção
     	    default :
     	    printf("\tEsta opção não existe\n\n"); 
     	    system("pause");
-    	    break;                 // final da seleção de registro de aluno 
+    	    break;                 // final da seleção  
     
     	
-    	    }
+    	    }  
         }
-	} // Início da seleção
+	} // final da seleção 
 
 
 int consulta()    // Início da seleção
@@ -198,7 +198,7 @@ int consulta()    // Início da seleção
 
        if(file == NULL)     // Caso não achar o cpf inserido
        {
-  	     int opcao = 0;
+  	     int opcao = 0;   // definindo variáveis 
     
          printf("\tCPF não cadastrado, gostaria de cadastrar?\n\n");
          printf("Opção 1 sim \n");
@@ -208,13 +208,13 @@ int consulta()    // Início da seleção
 	
 	     system("cls");
 	
-	     switch(opcao)  //        
+	     switch(opcao)  // Escolha das opções 
        	{ 
-    	     case 1: registro();      // Caso deseje cadastrar voltar em registro
+    	     case 1: registro();      // Caso deseje cadastrar, voltar em registro
     	     system("pause");
     	     break;
     	   
-    	     case 2: main();                 // Caso não deseje cadastrar voltar em menu
+    	     case 2: main();                 // Caso não deseje cadastrar, voltar em menu
     	     break;
     	   
         	 default :
@@ -318,10 +318,7 @@ int main()
     	   deletar ();
     	   break;
     	   
-    	   case 4:
-    	   printf("\tObrigado por utilizar o sistema!\n");
-    	   return 0;
-    	   break;
+    	   
     	   
     	   default :
     	   printf("\tEsta opção não existe\n"); 
